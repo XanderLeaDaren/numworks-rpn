@@ -1,4 +1,4 @@
-__version__ = "2025-03-11 T 13:28 UTC+1"
+__version__ = "2025-12-18 T 10:48 UTC+1"
 
 from math import exp, log, log10, sin, asin, cos, acos, tan, atan, pi, sqrt
 from time import sleep, monotonic
@@ -63,7 +63,7 @@ def evaluate1(operation):
         except Exception as message: draw_error(message)
         else: lastx = entry; stack.insert(0, python_int(result)); entry = ""
         draw_command(0)
-    draw_register(0, 0.2)
+    draw_stack(8, 0.2)
 
 def evaluate2(operation, refresh=True):
     """Evaluate binary operations."""
@@ -364,13 +364,13 @@ while True:
                     if level > 0: draw_register(level - 1, 0.2, True)
                     level -= 1
                 if keydown(17):  # BACKSPACE: DROP
-                    stack = stack[level:]; level = -1
+                    stack = stack[level+1:]; level = -1
                 if keydown(4) or keydown(52):  # OK/EXE: PICK
                     stack[0] = stack[level]; level = -1
                 if keydown(33):  # (: ROLL down
                     stack.insert(int(level), stack.pop(0)); level = -1
                 if keydown(5): level = -1  # BACK: exit selection mode
-            draw_register(0)
+            display(False)
 
     # Unary operators
     elif keydown(18):
@@ -378,6 +378,8 @@ while True:
         else: evaluate1(lambda x: exp(x))
     elif keydown(19): evaluate1(lambda x: log(x))
     elif keydown(20): evaluate1(lambda x: log10(x))
+    elif keydown(21): evaluate1(lambda x: 1/x)  # INVERSE
+    elif keydown(22): evaluate1(lambda x: -x)  # CHS
     elif keydown(24):
         if degrees: evaluate1(lambda x: sin(x * pi / 180))
         else: evaluate1(lambda x: sin(x))
