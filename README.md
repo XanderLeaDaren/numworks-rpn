@@ -22,6 +22,8 @@ A remark for the [(] key, which emulates [R↓] of HP calculators:
 
 Be careful that angles are set to degrees by default, as on many HP RPN-calculators. Use [R] or [D] to set to radians or back to degrees. There is no way to edit the top left yellow NumWorks indicator, however. 
 
+Two undocumented shortcuts: [i] for inverse, and [_] (no shift/alpha) for CHS.
+
 ### Two RPN stack variants
 On [x,n,t] key, the user may choose between two RPN variants:
 - Dynamic levels 1,2,3,… with infinite amount of inputs (default)
