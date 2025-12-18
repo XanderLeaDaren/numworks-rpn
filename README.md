@@ -30,3 +30,19 @@ On [x,n,t] key, the user may choose between two RPN variants:
 - Entry RPN with X,Y,Z,T levels, dropping oldest inputs and T keeping its value
 
 In dynamic mode, use the [↑] and [↓] arrows to select stack levels. When a level is selected, press [⌫] to DROP all levels from top down to the selected one, or press [OK] or [EXE] to PICK the value in the selected level and copy it on stack top instead of the actual value.
+
+### HP features not supported
+Because the script is already too heavy:
+- improper fractions
+- store to memories
+- complex numbers
+- vectors
+
+Because NumWorks apps do it better:
+- statistics
+- conversion tool
+
+Maybe for another project:
+- timer/countdown
+- triangle solver
+- time calculations between dates
