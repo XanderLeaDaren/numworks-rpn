@@ -1,4 +1,4 @@
-__version__ = "2025-12-19 T 10:27 UTC+1"
+__version__ = "2025-12-19 T 16:38 UTC+1"
 
 from math import exp, log, log10, sin, asin, cos, acos, tan, atan, pi, sqrt
 from time import sleep, monotonic
@@ -118,14 +118,17 @@ def draw_register(level, timeout=0, selected=False):
         height = 23; name = ("1:", "2:", "3:", "4:", "5:", "6:", "7:", "8:")
     bg_color = (245,250,255) if level % 2 == 0 else (255,254,255)
     bg_text = (214,213,231) if selected else bg_color
-    if stack[level] > 10**25:  # Scientific notation instead of overflowing big num
-        value = "{:.20e}".format(stack[level])
-    else:
-        value = python_trailing(str(stack[level]))
     y_text = 185 - (level+1)*height + (height - 18) // 2
     fill_rect(0, 184 - (level+1)*height, 320, height, bg_color)
     draw_string(name[level], 10, y_text, (0,0,0), bg_color)
-    draw_string(value, 310 - 10*len(value), y_text, (0,0,0), bg_text)
+    if fixed:
+        draw_string("{:.25f}".format(stack[level]), 40, y_text, (0,0,0), bg_text)
+    else:
+        if stack[level] > 10**25:  # Scientific notation to keep numbers on screen
+            value = "{:.20e}".format(stack[level])
+        else:
+            value = python_trailing(str(stack[level]))
+        draw_string(value, 310 - 10*len(value), y_text, (0,0,0), bg_text)
     sleep(timeout)
 
 def draw_stack(depth=8, timeout=0):
