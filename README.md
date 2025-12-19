@@ -31,6 +31,8 @@ On [x,n,t] key, the user may choose between two RPN variants:
 
 In dynamic mode, use the [↑] and [↓] arrows to select stack levels. When a level is selected, press [⌫] to DROP all levels from top down to the selected one, or press [OK] or [EXE] to PICK the value in the selected level and copy it on stack top instead of the actual value.
 
+In fixed Entry RPN mode, numbers are displayed with fixed 25 decimal places.
+
 ### HP features not supported
 Because the script is already too heavy:
 - improper fractions
