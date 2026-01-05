@@ -1,4 +1,4 @@
-__version__ = "2025-12-19 T 16:38 UTC+1"
+__version__ = "2026-01-05 T 13:05 UTC+1"
 
 from math import exp, log, log10, sin, asin, cos, acos, tan, atan, pi, sqrt
 from time import sleep, monotonic
@@ -122,7 +122,8 @@ def draw_register(level, timeout=0, selected=False):
     fill_rect(0, 184 - (level+1)*height, 320, height, bg_color)
     draw_string(name[level], 10, y_text, (0,0,0), bg_color)
     if fixed:
-        draw_string("{:.25f}".format(stack[level]), 40, y_text, (0,0,0), bg_text)
+        x = 40 if stack[level] >= 0 else 30
+        draw_string("{:.21f}".format(stack[level]), x, y_text, (0,0,0), bg_text)
     else:
         if stack[level] > 10**25:  # Scientific notation to keep numbers on screen
             value = "{:.20e}".format(stack[level])
