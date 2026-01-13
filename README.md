@@ -35,6 +35,7 @@ In fixed Entry RPN mode, numbers are displayed with fixed 25 decimal places.
 
 ### HP features not supported
 Because the script is already too heavy:
+- arithmetic functions: gcd, lcm, n choose k, …
 - improper fractions
 - store to memories
 - complex numbers
