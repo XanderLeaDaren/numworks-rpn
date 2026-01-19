@@ -218,7 +218,7 @@ def varbox():
 def toolbox():
     """Affiche un dialogue avec les fonctions de NPI habituelles et leurs touches"""
     keys = (" xnt", "  (", "  )", " Ans", "[shift]Ans", "[shift] ÷", "[shift] -")
-    desc = ("Pile fixe/dynamiq.", "Défilement bas", "échange niv.1 & 2", "Copie dernier arg.", "Copie niv.2 ", "Inverse ", "Opposé")
+    desc = ("Pile fixe/dynamiq.", "Défilement bas", "Échange niv.1 & 2", "Copie dernier arg.", "Copie niv.2 ", "Inverse ", "Opposé")
     fill_rect(27, 27, 266, 21, (65,64,65))
     fill_rect(28, 28, 264, 19, (108,99,115))
     draw_string("Raccourcis", 110, 28, (255,254,255), (108,99,115))
