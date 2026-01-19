@@ -4,6 +4,7 @@ Python script for the scientific Numworks calculator, enabling to type in RPN in
 
 ### Get it & test it now
 - Emulator on NumWorks website https://my.numworks.com/python/xanderleadaren/rpn
+- Version française disponible https://my.numworks.com/python/xanderleadaren/rpn_fr
 - New to RPN? Follow the [excellent RPN Tutorial by Hans Klaver](https://hansklav.home.xs4all.nl/rpn/index.html)!
 
 ### Keystrokes
@@ -11,8 +12,11 @@ Python script for the scientific Numworks calculator, enabling to type in RPN in
 - [Toolbox] key allows the user to display some other hotkeys, including RPN-specific functions as LastX, OVER, ROLL, SWAP, DUPlicate, …
 - [var] key shows functionalities mapped to [alpha]+{key}: prime factorisation, random, converting (degrees/radians, Fahrenheit/Celsius), random, …
 
-![téléchargement](https://github.com/user-attachments/assets/c633782f-a30b-4241-a8d5-fd019da3d049)
+<img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/1fde8cae-1a41-496c-9d7d-274c04783525" />
 
+<img width="320" height="240" alt="image" src="https://github.com/user-attachments/assets/ebe5af93-abf1-4d9e-87cf-bd80ea8149f9" />
+
+**Script available in English or French!**
 
 A remark for the [(] key, which emulates [R↓] of HP calculators:
 
