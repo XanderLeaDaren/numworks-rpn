@@ -2,6 +2,14 @@
 
 Python script for the scientific Numworks calculator, enabling to type in RPN in a graphical user interface.
 
+## This project has moved
+
+This repository is now maintained at
+https://codeberg.org/XanderLeaDaren/numworks-rpn
+
+This GitHub mirror may be out of date. Please file issues and
+contributions on Codeberg.
+
 ### Get it & test it now
 - Emulator on NumWorks website https://my.numworks.com/python/xanderleadaren/rpn
 - Version française disponible https://my.numworks.com/python/xanderleadaren/rpn_fr
